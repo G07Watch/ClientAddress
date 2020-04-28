@@ -1,0 +1,8 @@
+{
+  "short_name": "Client IP",
+  "name": "Client IP Location",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFFFFF",
+  "background_color": "#000000"
+}
