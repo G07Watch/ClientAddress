@@ -26,10 +26,10 @@ import axios from 'axios';
 }; */
 
 
-const getIpAddress = async (lat, lng, key) => {
+const getIpAddress = async (lat, lng) => {
   let response;
   response = await axios(
-    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${key}`,
+    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${secretOrKey}`,
     {
       method: 'GET',
       mode: 'no-cors',
