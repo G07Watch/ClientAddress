@@ -1,0 +1,24 @@
+{
+  "name": "client-address",
+  "version": "1.0.0",
+  "description": "Read Client IP and return location",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G07Watch/ClientAddress.git"
+  },
+  "author": "Garvin Ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G07Watch/ClientAddress/issues"
+  },
+  "homepage": "https://github.com/G07Watch/ClientAddress#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "redux": "^4.0.5"
+  }
+}
