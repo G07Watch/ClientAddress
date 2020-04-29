@@ -1,53 +1,33 @@
 import React, {useState, useEffect} from 'react';
-// import getIpAddress from './utils';
-import getIpAddress2 from './utilsCopy';
+import getIpAddress2 from './util';
 
 
 function Location(){
-  const [count, setCount] = useState(0);
-  const [address, updateAddress] = useState(null);
+  const [called, setCalled] = useState(false);
+  const [address, setAddress] = useState(null);
 
   useEffect(() => {
 
-    let didCancel = false;
-
     async function fetchAddress() {
       console.log('in fetchAddress');
-      const address = await getIpAddress2();
-      
-      if (!didCancel){
-        updateAddress(address);
-      }
+      const response = await getIpAddress2()
+      .then( res => res.data );
+
+      setAddress(response); 
     }
 
-    console.log('here!');
-    fetchAddress();  
-
-    console.log('current address', address);
+    fetchAddress(); 
   
-    return () => {
-      didCancel = true;
-    };
-  
-  },[address, updateAddress, count])
+  },[called])
 
   return(
 
     <div>
-      <p className='city' >
-        {address ? `${address}` : 'Loading' }
-        </p>
-
-        <br></br>
-
-        <p>
-        {count}
-       </p>
-
-      <button onClick={()=> setCount(count + 1) }>
+      { address && <p> {address} </p> }
+      <br></br>      
+      <button onClick={()=> setCalled( !called ) }>
         Get Location
       </button>
-
     </div>
 
 
