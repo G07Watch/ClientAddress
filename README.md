@@ -1,5 +1,7 @@
 App to read Client IP address and returnn location via an API
 
+API utilized: https://geoip-db.com/json
+
 After cloning to run the application, please do the following from the application's root folder:
 
 1) 'npm install'
