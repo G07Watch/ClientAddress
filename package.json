@@ -1,0 +1,35 @@
+{
+  "name": "client-address",
+  "version": "1.0.0",
+  "description": "Read Client IP and return location",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "server:debug": "nodemon --inspect app.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "activate": "concurrently \"npm run server:debug\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G07Watch/ClientAddress.git"
+  },
+  "author": "Garvin Ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G07Watch/ClientAddress/issues"
+  },
+  "homepage": "https://github.com/G07Watch/ClientAddress#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
