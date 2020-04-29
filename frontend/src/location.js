@@ -9,7 +9,6 @@ function Location(){
   useEffect(() => {
 
     async function fetchAddress() {
-      console.log('in fetchAddress');
       const response = await getIpAddress2()
       .then( res => res.data );
 
