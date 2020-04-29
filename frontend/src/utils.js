@@ -1,4 +1,5 @@
 import axios from 'axios';
+const secretOrKey = '';
 
 /* const getIpAddress = async () => {
   let response;

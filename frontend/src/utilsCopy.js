@@ -1,8 +1,20 @@
+// import getIpAddress from './utils';
+
 const axios = require('axios');
 
-const getIpAddress = async () => {
+/* const getIpAddress2 = async () => {
   let response;
-  response = await axios.get('https://geoip-db.com/json')
+  response = await axios('https://geoip-db.com/json',
+    {
+      method: 'GET',
+      mode: 'no-cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+      credentials: 'same-origin',
+    })
   .then(res =>{
     if(res){
       return res.data
@@ -12,6 +24,9 @@ const getIpAddress = async () => {
 
   console.log(response);
   return response;
+}; */
+const getIpAddress2 = () => {
+ return axios.get('/api/geo')
 };
 
-console.log (getIpAddress());
+export default getIpAddress2;
