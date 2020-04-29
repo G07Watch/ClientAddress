@@ -1,4 +1,4 @@
-App to read Client IP address and returnn location via an API
+App to read Client IP address and return location via an API
 
 API utilized: https://geoip-db.com/json
 
