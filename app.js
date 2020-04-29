@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const db = require('./config/keys').secretOrKey;
 const geoRouter = require('./routes/api/geo')
 
 app.get("/", (req, res) => {
