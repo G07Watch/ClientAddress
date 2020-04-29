@@ -1,7 +1,11 @@
-const axios = require('axios');
+import axios from 'axios';
+
+const getIpAddress = (lat, lng) => {
+  return axios.get(`/api/geo/${lat}/${lng}`)
+}
 
 const getIpAddress2 = () => {
  return axios.get('/api/geo')
 };
 
-export default getIpAddress2;
+export { getIpAddress, getIpAddress2};
